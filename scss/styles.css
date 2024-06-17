@@ -1,0 +1,260 @@
+body {
+  display: block;
+  margin: 0 auto;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background: #74c69d;
+  color: #fff;
+  padding: 35px 9% 83px 9%;
+}
+
+footer {
+  width: 100%;
+  background: #74c69d;
+  color: #fff;
+  padding: 35px 9% 35px 9%;
+}
+
+nav.menu {
+  margin-bottom: 40px;
+}
+
+.menu,
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#burger-checkbox {
+  display: none;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.menu-item {
+  padding-right: 3rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-main {
+  width: 1180px;
+  height: 378px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.main-content {
+  width: 416px;
+  height: 299px;
+  padding: 0% 0% 8% 0%;
+  margin-top: 39.57px;
+  margin-bottom: 39.57px;
+}
+
+.main-img {
+  width: 100%;
+  width: 645px;
+  height: 379px;
+}
+
+h1 {
+  font-family: "Crimson Text", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: #fff;
+}
+
+.p-h1 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 125%;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+button {
+  width: 170px;
+  height: 48px;
+  border-radius: 0.5rem;
+  border-style: none;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  line-height: 125%;
+  color: #000;
+  margin-top: 25px;
+}
+
+/* Faq */
+.faq {
+  max-width: 100%;
+  width: 1180px;
+  margin: 30px 0% 30px 0%;
+}
+
+.faq-item {
+  border: 1px solid #74c69d;
+}
+
+.faq-title {
+  line-height: 125%;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+.faq-title .h1-1 {
+  font-family: "Crimson Text", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #000;
+}
+.faq-title .p-1 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.faq-title:hover {
+  background-color: #74c69d;
+}
+
+.faq-input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+}
+
+.faq-input:checked + .faq-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-text {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .header-main {
+    flex-direction: column;
+    padding-bottom: 40.39px;
+  }
+  .header-main .main-content {
+    order: 1;
+    padding: 0%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    padding: 25px 4% 25px 4%;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu .burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .menu .burger {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: #74c69d;
+    width: 40px;
+    height: 26px;
+  }
+  .menu .burger::before,
+  .menu .burger::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #fff;
+  }
+  .menu .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #fff;
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  }
+  .menu .burger::after {
+    bottom: 0;
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+  }
+  .menu .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  }
+  .menu .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+  .menu .menu-list {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: grid;
+    gap: 12px;
+    padding: 42px 0;
+    margin: 0;
+    background: #74c69d;
+    opacity: 90%;
+    list-style-type: none;
+    transform: translateX(-100%);
+    transition: 0.3s;
+    width: 200px;
+  }
+  .menu .menu-item {
+    display: block;
+    padding: 8px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .menu .menu-item:hover {
+    background: rgba(193, 245, 185, 0.2);
+  }
+  .menu .burger-checkbox:checked ~ .menu-list {
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=styles.css.map */
